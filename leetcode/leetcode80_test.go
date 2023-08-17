@@ -1,7 +1,6 @@
 package leetcode
 
 import (
-	"fmt"
 	"testing"
 
 	. "github.com/smartystreets/goconvey/convey"
@@ -9,9 +8,9 @@ import (
 
 func TestRemoveDuplicatesWithSum(t *testing.T) {
 	Convey("in", t, func() {
-		input := [][]byte{{'A', 'B', 'C', 'E'}, {'S', 'F', 'C', 'S'}, {'A', 'D', 'E', 'E'}}
-		target := "SEE"
-		x := Exist(input, target)
-		fmt.Println(x)
+		input := []int{1, 1, 1, 2, 2, 3}
+		res := RemoveDuplicatesWithSum(input)
+		target_res := []int{1, 1, 2, 2, 3}
+		Convey(ShouldResemble, res, target_res)
 	})
 }
