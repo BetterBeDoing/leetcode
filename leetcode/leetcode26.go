@@ -9,7 +9,6 @@ func RemoveDuplicates(nums []int) int {
 	for ptr1 < len(nums) {
 		if nums[ptr0] == nums[ptr1] {
 			ptr1++
-			sum++
 		} else {
 			ptr0++
 			nums[ptr0] = nums[ptr1]
