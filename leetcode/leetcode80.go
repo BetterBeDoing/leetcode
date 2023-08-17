@@ -9,7 +9,6 @@ func RemoveDuplicatesWithSum(nums []int) int {
 		if nums[i] != nums[idx-2] {
 			nums[idx] = nums[i]
 			idx += 1
-
 		}
 	}
 	return idx
