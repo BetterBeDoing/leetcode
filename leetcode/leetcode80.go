@@ -1,25 +1,16 @@
 package leetcode
 
 func RemoveDuplicatesWithSum(nums []int) int {
-	var (
-		ptr0 int  = 0
-		ptr1 int  = 1
-		meet bool = false
-	)
+	if len(nums) < 2 {
+		return len(nums)
+	}
+	idx := 2
+	for i := 2; i < len(nums); i++ {
+		if nums[i] != nums[idx-2] {
+			nums[idx] = nums[i]
+			idx += 1
 
-	for ptr1 < len(nums) {
-		if nums[ptr0] == nums[ptr1] && meet {
-			ptr0++
-			ptr1++
-			meet = true
-		} else {
-			ptr0++
-			nums[ptr0] = nums[ptr1]
-			if nums[ptr0] != nums[ptr1] {
-				meet = false
-			}
 		}
 	}
-
-	return ptr0 + 1
+	return idx
 }
