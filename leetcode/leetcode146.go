@@ -20,7 +20,7 @@ func newNode(key, value int) *listNode {
 	}
 }
 
-func Constructor(capacity int) LRUCache {
+func LRUConstructor(capacity int) LRUCache {
 	tmp := new(LRUCache)
 	tmp.cap = capacity
 	tmp.head = newNode(0, 0)
