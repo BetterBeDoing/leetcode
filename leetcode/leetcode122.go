@@ -18,10 +18,3 @@ func maxProfit(prices []int) int {
 
 	return profit[len(prices)-1]
 }
-
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
