@@ -9,3 +9,6 @@ func rotate(matrix [][]int) {
 		}
 	}
 }
+
+//(i,j) -> (j,n-1-i) ->(n-1-i,n-j-1)->(n-j-1,i)->(i,j)
+//
